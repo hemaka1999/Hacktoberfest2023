@@ -1,0 +1,27 @@
+public class HeartStarPattern {
+    public static void main(String[] args) {
+        int size = 6; // Adjust the size of the heart
+
+        for (int i = size; i >= -size; i--) {
+            for (int j = 0; j < 2 * (size - Math.abs(i)); j++) {
+                // Left side of the heart
+                if (j < size - Math.abs(i)) {
+                    System.out.print(" ");
+                } else {
+                    System.out.print("*");
+                }
+
+                // Gap in the middle
+                if (j == size - 1) {
+                    System.out.print(" ");
+                }
+
+                // Right side of the heart
+                if (j >= size + Math.abs(i)) {
+                    System.out.print("*");
+                }
+            }
+            System.out.println();
+        }
+    }
+}
